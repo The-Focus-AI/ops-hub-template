@@ -56,11 +56,22 @@ Weekly reports: `projects/clients/*/YYYY-W*.md`
 
 | Command | Purpose |
 |---------|---------|
-| `/sync` | Pull from external sources (GitHub activity, optional: meetings, newsletter) |
+| `/setup` | Interactive setup wizard — run this first to configure everything |
 | `/daily` | Morning briefing + update README.md text |
 | `/weekly` | Weekly review + update all files + regenerate README |
+| `/sync` | Pull from external sources (GitHub activity, optional: meetings, newsletter) |
 | `/push` | Auto-commit and push |
 | `/client-update <client>` | Create DRAFT status email for client (never sends directly) |
+
+## Drop-in Document Processing
+
+Drop PDFs into these folders and ask Claude to process them:
+
+| Folder | What to drop | What happens |
+|--------|-------------|-------------|
+| `invoices/` | Invoice PDFs | Extracted into `invoices.md` and `finances/revenue.md` |
+| `scopes/` | SOWs, proposals, scope docs | Extracted into client project files |
+| `team/` | Contracts, agreements | Extracted into `finances/contractors.md` and team records |
 
 ## Skills
 
